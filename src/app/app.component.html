@@ -1,0 +1,15 @@
+<div class="filtro">
+  <span class="buscarLibros">Buscar:</span>
+  <input [(ngModel)]="textoABuscar" class="filtroLibros">
+</div>
+
+<table class="tablaLibros">
+  <tr>
+    <th>Titulo</th>
+    <th>Autor</th>
+  </tr>
+  <tr *ngFor="let libro of libros | filterLibros: textoABuscar">
+    <td>{{libro.titulo}}</td>
+    <td>{{libro.autor}}</td>
+  </tr>
+</table>
